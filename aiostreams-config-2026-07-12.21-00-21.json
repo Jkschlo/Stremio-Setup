@@ -1,0 +1,801 @@
+{
+  "trusted": false,
+  "excludedResolutions": [],
+  "preferredResolutions": [
+    "2160p",
+    "1440p",
+    "1080p",
+    "720p"
+  ],
+  "excludedQualities": [
+    "CAM",
+    "SCR",
+    "TS",
+    "TC"
+  ],
+  "preferredQualities": [
+    "BluRay REMUX",
+    "BluRay",
+    "WEB-DL",
+    "WEBRip",
+    "HDRip",
+    "HC HD-Rip",
+    "DVDRip",
+    "HDTV",
+    "CAM",
+    "TS",
+    "TC",
+    "SCR",
+    "Unknown"
+  ],
+  "excludedLanguages": [],
+  "preferredLanguages": [
+    "English"
+  ],
+  "excludedSubtitles": [],
+  "preferredSubtitles": [],
+  "excludedVisualTags": [
+    "3D"
+  ],
+  "preferredVisualTags": [],
+  "preferredAudioTags": [],
+  "preferredStreamTypes": [],
+  "preferredEncodes": [],
+  "seederRangeTypes": [],
+  "ageRangeTypes": [],
+  "digitalReleaseFilter": {
+    "enabled": true,
+    "tolerance": 20,
+    "requestTypes": [],
+    "addons": []
+  },
+  "excludeUncached": true,
+  "sortCriteria": {
+    "global": [
+      {
+        "key": "cached",
+        "direction": "desc"
+      },
+      {
+        "key": "resolution",
+        "direction": "desc"
+      },
+      {
+        "key": "library",
+        "direction": "desc"
+      },
+      {
+        "key": "regexPatterns",
+        "direction": "desc"
+      },
+      {
+        "key": "streamType",
+        "direction": "desc"
+      },
+      {
+        "key": "visualTag",
+        "direction": "desc"
+      },
+      {
+        "key": "audioTag",
+        "direction": "desc"
+      },
+      {
+        "key": "audioChannel",
+        "direction": "desc"
+      },
+      {
+        "key": "encode",
+        "direction": "desc"
+      },
+      {
+        "key": "language",
+        "direction": "desc"
+      },
+      {
+        "key": "size",
+        "direction": "desc"
+      }
+    ]
+  },
+  "posterService": "rpdb",
+  "formatter": {
+    "id": "gdrive",
+    "definitions": {
+      "custom": {
+        "name": "",
+        "description": ""
+      }
+    }
+  },
+  "proxy": {
+    "enabled": false,
+    "id": "stremthru",
+    "proxiedServices": []
+  },
+  "deduplicator": {
+    "enabled": true,
+    "multiGroupBehaviour": "aggressive",
+    "keys": [
+      "filename",
+      "infoHash"
+    ],
+    "cached": "single_result",
+    "uncached": "per_service",
+    "p2p": "single_result"
+  },
+  "precacheNextEpisode": true,
+  "precacheSelector": "count(cached(streams)) == 0 ? uncached(streams) : []",
+  "preloadStreams": {
+    "enabled": true
+  },
+  "services": [
+    {
+      "id": "debridge",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "realdebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "alldebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "premiumize",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debridlink",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "torbox",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremio_nntp",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "nzbdav",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "altmount",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "offcloud",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "putio",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easynews",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easydebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debrider",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "pikpak",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "seedr",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremthru_newz",
+      "enabled": false,
+      "credentials": {}
+    }
+  ],
+  "presets": [
+    {
+      "type": "tmdb-addon",
+      "instanceId": "2eb",
+      "enabled": true,
+      "options": {
+        "name": "The Movie Database",
+        "timeout": 7000,
+        "resources": [
+          "catalog",
+          "meta"
+        ],
+        "Enable Adult Content": false,
+        "hideEpisodeThumbnails": false,
+        "provideImdbId": true,
+        "language": "en-US"
+      }
+    },
+    {
+      "type": "streaming-catalogs",
+      "instanceId": "37a",
+      "enabled": false,
+      "options": {
+        "name": "Streaming Catalogs",
+        "timeout": 7000,
+        "resources": [
+          "catalog"
+        ],
+        "catalogs": [
+          "nfx",
+          "hbm",
+          "dnp",
+          "amp",
+          "atp"
+        ]
+      }
+    },
+    {
+      "type": "marvel-universe",
+      "instanceId": "12a",
+      "enabled": true,
+      "options": {
+        "name": "Marvel Universe",
+        "timeout": 7000,
+        "resources": [
+          "catalog",
+          "meta"
+        ],
+        "catalogs": [
+          "marvel-mcu",
+          "release-order",
+          "movies",
+          "series",
+          "animations"
+        ]
+      }
+    },
+    {
+      "type": "star-wars-universe",
+      "instanceId": "0f9",
+      "enabled": true,
+      "options": {
+        "name": "Star Wars Universe",
+        "timeout": 7000,
+        "resources": [
+          "catalog",
+          "meta"
+        ],
+        "catalogs": [
+          "sw-movies-series-chronological",
+          "sw-movies-series-release",
+          "sw-anthology-films",
+          "sw-live-action-series",
+          "sw-animated-series"
+        ]
+      }
+    },
+    {
+      "type": "custom",
+      "instanceId": "4fb",
+      "enabled": true,
+      "options": {
+        "name": "Genres",
+        "manifestUrl": "https://movies.filterlypro.com/manifest.json?config=eyJhcGlLZXkiOiJjOTY3ZjFlYTA0ZDBhZjRjOGZhMDI0YjcyNjVhYWE2OCIsImdlbnJlcyI6IjI4LDEyLDE2LDM1LDgwLDk5LDE4LDE0LDI3LDEwNDAyLDk2NDgsMTA3NDksODc4LDUzLDM3IiwieWVhclJhbmdlcyI6IjE5MDAtMjAyOSIsImZhdm9yaXRlR2VucmVzIjoiIiwidmlld2luZ09wdGlvbnMiOiIifQ==",
+        "timeout": 7000,
+        "mediaTypes": [],
+        "libraryAddon": false,
+        "resultPassthrough": false,
+        "forceToTop": false
+      }
+    },
+    {
+      "type": "aiosubtitle",
+      "instanceId": "e39",
+      "enabled": true,
+      "options": {
+        "name": "AIOSubtitle",
+        "timeout": 7000,
+        "resources": [
+          "subtitles"
+        ],
+        "languages": [
+          "english"
+        ],
+        "microsoftTranslatorRegion": "global"
+      }
+    }
+  ],
+  "catalogModifications": [
+    {
+      "id": "2ebe3b0.tmdb.trending",
+      "type": "movie",
+      "name": "Trending",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.trending",
+      "type": "series",
+      "name": "Trending",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "12ae3b0.marvel-mcu",
+      "type": "Marvel",
+      "name": "MCU Chronologically Order",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Marvel Universe"
+    },
+    {
+      "id": "12ae3b0.release-order",
+      "type": "Marvel",
+      "name": "MCU Release Order",
+      "shuffle": false,
+      "onlyOnDiscover": false,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Marvel Universe"
+    },
+    {
+      "id": "12ae3b0.movies",
+      "type": "Marvel",
+      "name": "Movies",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Marvel Universe"
+    },
+    {
+      "id": "12ae3b0.series",
+      "type": "Marvel",
+      "name": "Series",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Marvel Universe"
+    },
+    {
+      "id": "12ae3b0.animations",
+      "type": "Marvel",
+      "name": "Animations",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Marvel Universe"
+    },
+    {
+      "id": "aiostreams.merged.1769016384864",
+      "type": "Marvel",
+      "name": "All Productions",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false
+    },
+    {
+      "id": "0f9e3b0.sw-movies-series-chronological",
+      "type": "StarWars",
+      "name": "Movies & Series Chronological",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Star Wars Universe"
+    },
+    {
+      "id": "0f9e3b0.sw-movies-series-release",
+      "type": "StarWars",
+      "name": "Everything",
+      "shuffle": false,
+      "onlyOnDiscover": false,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "StarWars",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Star Wars Universe"
+    },
+    {
+      "id": "0f9e3b0.sw-anthology-films",
+      "type": "StarWars",
+      "name": "Anthology Films",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Star Wars Universe"
+    },
+    {
+      "id": "0f9e3b0.sw-live-action-series",
+      "type": "StarWars",
+      "name": "Live-Action Series",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Star Wars Universe"
+    },
+    {
+      "id": "0f9e3b0.sw-animated-series",
+      "type": "StarWars",
+      "name": "Animated Series",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Star Wars Universe"
+    },
+    {
+      "id": "2ebe3b0.tmdb.top",
+      "type": "movie",
+      "name": "Popular",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.top",
+      "type": "series",
+      "name": "Popular",
+      "shuffle": false,
+      "reverse": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "4fbe3b0.action_1900s",
+      "type": "🎬 Action",
+      "name": "Action",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.adventure_1900s",
+      "type": "🎬 Adventure",
+      "name": "Adventure",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.animation_1900s",
+      "type": "🎬 Animation",
+      "name": "Animated",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.comedy_1900s",
+      "type": "🎬 Comedy",
+      "name": "Comedy",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.crime_1900s",
+      "type": "🎬 Crime",
+      "name": "Crime",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.documentary_1900s",
+      "type": "🎬 Documentary",
+      "name": "Documentary",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.drama_1900s",
+      "type": "🎬 Drama",
+      "name": "Drama",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.fantasy_1900s",
+      "type": "🎬 Fantasy",
+      "name": "Fantasy",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.horror_1900s",
+      "type": "🎬 Horror",
+      "name": "Horror",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.music_1900s",
+      "type": "🎬 Music",
+      "name": "Music",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.mystery_1900s",
+      "type": "🎬 Mystery",
+      "name": "Mystery",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.romance_1900s",
+      "type": "🎬 Romance",
+      "name": "Romance",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.sci-fi_1900s",
+      "type": "🎬 Sci-Fi",
+      "name": "Sci-Fi",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.thriller_1900s",
+      "type": "🎬 Thriller",
+      "name": "Thriller",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": true,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "4fbe3b0.western_1900s",
+      "type": "🎬 Western",
+      "name": "Western",
+      "shuffle": true,
+      "reverse": false,
+      "persistShuffleFor": 24,
+      "enabled": false,
+      "usePosterService": false,
+      "overrideType": "Genre",
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Genres"
+    },
+    {
+      "id": "2ebe3b0.tmdb.language",
+      "type": "movie",
+      "name": "Language",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.year",
+      "type": "series",
+      "name": "Year",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.language",
+      "type": "series",
+      "name": "Language",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.search",
+      "type": "movie",
+      "name": "Search",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": false,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.search",
+      "type": "series",
+      "name": "Search",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": false,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    },
+    {
+      "id": "2ebe3b0.tmdb.year",
+      "type": "movie",
+      "name": "Year",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "The Movie Database"
+    }
+  ],
+  "mergedCatalogs": [
+    {
+      "id": "aiostreams.merged.1769016384864",
+      "name": "All Productions",
+      "type": "Marvel",
+      "catalogIds": [
+        "id=12ae3b0.movies&type=Marvel",
+        "id=12ae3b0.series&type=Marvel",
+        "id=12ae3b0.animations&type=Marvel"
+      ],
+      "enabled": true,
+      "deduplicationMethods": [
+        "id"
+      ],
+      "mergeMethod": "interleave"
+    }
+  ],
+  "checkOwned": true
+}
